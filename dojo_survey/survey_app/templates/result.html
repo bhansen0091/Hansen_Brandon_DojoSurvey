@@ -8,7 +8,20 @@
 </head>
 <body>
     <div id="wrapper">
-
+        <div class="result_display_container">
+            <header class="page_header">
+                <h1 class="result_header">
+                    Submitted Info
+                </h1>
+            </header>
+            <div class="result_display">
+                <p>Name: {{ name_from_template }}</p>
+                <p>Email: {{ email_from_template }}</p>
+                <p>{{ radio_btn_from_template }}</p>
+                <p>{{ drop_down_selection }}</p>
+                <p>{{ comment_section }}</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>

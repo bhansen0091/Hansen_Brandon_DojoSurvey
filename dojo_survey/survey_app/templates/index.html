@@ -11,7 +11,7 @@
 <body>
     <div id="wrapper">
         <div class="form_container">
-            <form action="/survey_complete" method="post">
+            <form action="/result" method="post">
                 {% csrf_token %}
                 <div class="text_inputs">
                     <p class="name_input">
@@ -21,8 +21,39 @@
                         Email: <input type="text" name="email" >
                     </p>
                 </div>
-
-                <button type="submit">Submit Survey</button>
+                <div class="radio_button_inputs">
+                    <ul class="radio_btn_list">
+                        <li class="new_dev_btn">
+                            New Developer:
+                            <input type="radio" name="radio_btn" value="New Developer">
+                        </li>
+                        <li class="some_exp_btn">
+                            Mid-Level Developer:
+                            <input type="radio" name="radio_btn" value="Mid-Level Developer">
+                        </li>
+                        <li class="exp_dev_btn">
+                            Experienced Developer:
+                            <input type="radio" name="radio_btn" value="Experienced Developer">
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown_select_container">
+                    <label for="drop_down_selection">Dojo Location</label>
+                    <select name="drop_down_selection">
+                        <option value="value_1">value_1</option>
+                        <option value="value_2">value_2</option>
+                        <option value="value_3">value_3</option>
+                        <option value="value_4">value_4</option>
+                        <option value="value_5">value_5</option>
+                    </select>
+                </div>
+                <div class="text_area_container">
+                    <label for="comment_section">Comment:</label>
+                    <textarea type="text" name="comment_section" cols="30" rows="5" placeholder="Comment"></textarea>
+                </div>
+                <div class="button_container">
+                    <button type="submit">Submit Survey</button>
+                </div>
             </form>
     </div>
 </body>
