@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show User</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="form_container">
+            <form action="/survey_complete" method="post">
+                {% csrf_token %}
+                <div class="text_inputs">
+                    <p class="name_input">
+                        Name: <input type="text" name="name">
+                    </p>
+                    <p class="email_input">
+                        Email: <input type="text" name="email" >
+                    </p>
+                </div>
+
+                <button type="submit">Submit Survey</button>
+            </form>
+    </div>
+</body>
+</html>
